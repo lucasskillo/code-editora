@@ -30,6 +30,16 @@
     <!--    Icons   -->
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 
+    <!-- Styles -->
+    <link href="/css/app.css" rel="stylesheet">
+
+    <!-- Scripts -->
+    <script>
+        window.Laravel = <?php echo json_encode([
+            'csrfToken' => csrf_token(),
+        ]); ?>
+    </script>
+
     <!-- Databales -->
     <link href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
     <link href='https://cdn.datatables.net/1.10.13/css/dataTables.bootstrap.min.css' rel='stylesheet' type='text/css'>
