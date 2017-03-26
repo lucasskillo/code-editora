@@ -14,20 +14,19 @@
                 </div>
                 <hr>
                 <div class="content">
-                      {!! Form::open(['route' => 'categories.store', 'class' => 'form']) !!}
+                    {!! Form::open(['route' => 'categories.store', 'class' => 'form']) !!}
 
-                        {!! Html::openFormGroup !!}
+                        {!! Html::openFormGroup('name', $errors) !!}
                             {!! Form::label('name', 'Nome', ['class' => 'control-label']) !!}
                             {!! Form::text('name', null, ['class' => 'form-control']) !!}
-                            <span class='help-block'>
-                                <strong>{{$errors->first('name')}}</strong>
-                            </span>
-                        {!! Html::closeFormGroup !!}
-                        <div class="form-group">
-                           {!! Form::submit('Salvar', ['class' => 'btn btn-wd btn-success']) !!}
-                        </div>
+                            {!! Form::error('name', $errors) !!}
+                        {!! Html::closeFormGroup() !!}
+
+                        {!! Html::openFormGroup() !!}
+                            {!! Form::submit('Salvar', ['class' => 'btn btn-wd btn-success']) !!}
+                        {!! Html::closeFormGroup() !!}
+
                     {!! Form::close() !!}
-                    </form>
                 </div><!-- end content-->
             </div><!--  end card  -->
         </div> <!-- end col-md-12 -->

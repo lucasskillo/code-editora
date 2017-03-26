@@ -20,8 +20,8 @@ class AppServiceProvider extends ServiceProvider
            return null;
         });
 
-        \Html::macro('openFormGroup', function($errors = null ){
-           $hasError = $errors->has('email') ? ' has-error' : '';
+        \Html::macro('openFormGroup', function($field = null, $errors = null){
+           $hasError = ($field != null and $errors != null and $errors->has($field)) ? ' has-error' : '';
            return "<div class=\"form-group{$hasError}\">";
         });
 
