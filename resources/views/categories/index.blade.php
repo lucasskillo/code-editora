@@ -48,8 +48,7 @@
                                                  class="btn-danger btn-sm"
                                                  onclick="event.preventDefault();document.getElementById('{{$deleteform}}').submit();">
                                                   <i class="fa fa-close"></i></a>
-                                        {!! Form::open(['route' =>
-                                                                   ['categories.destroy', '$category' => $category],
+                                        {!! Form::open(['route'  => ['categories.destroy', '$category' => $category],
                                                         'method' => 'DELETE',
                                                         'id'     => $deleteform,
                                                         'style'  => 'display:none']) !!}
