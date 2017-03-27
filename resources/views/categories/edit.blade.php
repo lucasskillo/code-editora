@@ -18,16 +18,13 @@
                                     'route' => ['categories.update', 'category' => $category->id]
                                     , 'class' => 'form', 'method' => 'PUT'])!!}
 
-                    <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
-                        {!! Form::label('name', 'Nome') !!}
-                        {!! Form::text('name', null, ['class' => 'form-control']) !!}
-                    </div>
+                        @include('categories._form')
 
-                    <div class="form-group">
-                        {!! Form::submit('Salvar', ['class' => 'btn btn-wd btn-success']) !!}
-                    </div>
+                        {!! Html::openFormGroup() !!}
+                            {!! Form::submit('Salvar', ['class' => 'btn btn-wd btn-success']) !!}
+                        {!! Html::closeFormGroup() !!}
+
                     {!! Form::close() !!}
-                    </form>
                 </div><!-- end content-->
             </div><!--  end card  -->
         </div> <!-- end col-md-12 -->
