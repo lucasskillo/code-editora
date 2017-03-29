@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "87c16c67192b52d4cd965ff04b072272",
-    "content-hash": "7c73150a49535fcdf0a90e17e68a906d",
+    "hash": "eaaa0e974b7fbb31f34d0a7635ce460a",
+    "content-hash": "e46da3e06b21c231565a27c38f06b4e1",
     "packages": [
         {
             "name": "barryvdh/laravel-ide-helper",
@@ -1405,16 +1405,16 @@
         },
         {
             "name": "patricktalmadge/bootstrapper",
-            "version": "5.9.1",
+            "version": "5.10.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/patricktalmadge/bootstrapper.git",
-                "reference": "4180ddf4bb889ed731478a07fcca3492884eb4c2"
+                "reference": "585dc48f8c43475eaddf59cc4acdbfdb83503ef0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/patricktalmadge/bootstrapper/zipball/4180ddf4bb889ed731478a07fcca3492884eb4c2",
-                "reference": "4180ddf4bb889ed731478a07fcca3492884eb4c2",
+                "url": "https://api.github.com/repos/patricktalmadge/bootstrapper/zipball/585dc48f8c43475eaddf59cc4acdbfdb83503ef0",
+                "reference": "585dc48f8c43475eaddf59cc4acdbfdb83503ef0",
                 "shasum": ""
             },
             "require": {
@@ -1461,7 +1461,7 @@
                 "bootstrap",
                 "laravel"
             ],
-            "time": "2016-08-31 21:53:43"
+            "time": "2017-01-31 14:48:14"
         },
         {
             "name": "psr/log",

@@ -21,7 +21,8 @@
                         @include('categories._form')
 
                         {!! Html::openFormGroup() !!}
-                            {!! Form::submit('Salvar', ['class' => 'btn btn-wd btn-success']) !!}
+                            {!! Button::success('Salvar')->submit() !!}
+                            {!! Button::danger('Cancelar')->asLinkTo(route('categories.index')) !!}
                         {!! Html::closeFormGroup() !!}
 
                     {!! Form::close() !!}
