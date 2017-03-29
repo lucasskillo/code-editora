@@ -144,6 +144,9 @@ return [
         'title'                 => 'título',
         'username'              => 'usuário',
         'year'                  => 'ano',
+        'price'                 => 'Preço',
+        'title'                 => 'Título',
+        'subtitle'              => 'Sub-Título',
     ],
 
 ];

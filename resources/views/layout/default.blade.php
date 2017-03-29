@@ -95,7 +95,7 @@
 
                 <li class="@yield('active_book')">
                     <a href="/books">
-                        <i class="fa fa-cutlery"></i>
+                        <i class="fa fa-book"></i>
                         <p>Livro</p>
                     </a>
                 </li>

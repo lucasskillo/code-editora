@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Book;
+use App\Http\Requests\BookRequest;
+use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Http\Request;
 
 class BooksController extends Controller
@@ -24,7 +27,7 @@ class BooksController extends Controller
      */
     public function create()
     {
-        //
+        return view ('books.create');
     }
 
     /**
@@ -33,20 +36,10 @@ class BooksController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(BookRequest $request)
     {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
+        Book::create($request->all());
+        return redirect()->route('books.index');
     }
 
     /**
@@ -55,9 +48,9 @@ class BooksController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Book $book)
     {
-        //
+        return view('books.edit', compact('book'));
     }
 
     /**
@@ -67,9 +60,12 @@ class BooksController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(BookRequest $request, Book $book)
     {
-        //
+        $book->fill($request->all());
+        $book->save();
+
+        return redirect()->route('books.index');
     }
 
     /**
@@ -78,8 +74,9 @@ class BooksController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Book $book)
     {
-        //
+        $book->delete();
+        return redirect()->route('books.index');
     }
 }

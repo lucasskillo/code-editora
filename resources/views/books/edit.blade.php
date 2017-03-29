@@ -14,9 +14,9 @@
                 </div>
                 <hr>
                 <div class="content">
-                    {!! Form::model($category,[
+                    {!! Form::model($book,[
                                     'route' => ['books.update', 'book' => $book->id]
-                                    , 'class' => 'form-horizontal', 'method' => 'PUT'])!!}
+                                    , 'class' => 'form', 'method' => 'PUT'])!!}
 
                         @include('books._form')
 

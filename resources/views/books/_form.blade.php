@@ -1,23 +1,17 @@
 {!! Html::openFormGroup('title', $errors) !!}
-    {!! Form::label('title', 'Título', ['class' => 'control-label']) !!}
-    <div class="col-lg-6">
-        {!! Form::text('title', null, ['class' => 'form-control']) !!}
-        {!! Form::error('title', $errors) !!}
-    </div>
+{!! Form::label('title', 'Título', ['class' => 'control-label']) !!}
+{!! Form::text('title', null, ['class' => 'form-control']) !!}
+{!! Form::error('title', $errors) !!}
 {!! Html::closeFormGroup() !!}
 
 {!! Html::openFormGroup('subtitle', $errors) !!}
 {!! Form::label('subtitle', 'Sub-Título', ['class' => 'control-label']) !!}
-<div class="col-lg-6">
-    {!! Form::text('subtitle', null, ['class' => 'form-control']) !!}
-    {!! Form::error('subtitle', $errors) !!}
-</div>
+{!! Form::text('subtitle', null, ['class' => 'form-control']) !!}
+{!! Form::error('subtitle', $errors) !!}
 {!! Html::closeFormGroup() !!}
 
 {!! Html::openFormGroup('price', $errors) !!}
 {!! Form::label('price', 'Preço', ['class' => 'control-label']) !!}
-<div class="col-lg-6">
-    {!! Form::number('price', null, ['class' => 'form-control']) !!}
-    {!! Form::error('price', $errors) !!}
-</div>
+{!! Form::number('price',null,['class' => 'form-control','step'=>'any']) !!}
+{!! Form::error('price', $errors) !!}
 {!! Html::closeFormGroup() !!}

@@ -14,7 +14,7 @@
                 </div>
                 <hr>
                 <div class="content">
-                    {!! Form::open(['route' => 'books.store', 'class' => 'form-horizontal']) !!}
+                    {!! Form::open(['route' => 'books.store', 'class' => 'form']) !!}
 
                         @include('books._form')
 
