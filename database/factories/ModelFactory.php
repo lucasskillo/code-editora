@@ -33,8 +33,8 @@ $factory->define(App\Category::class, function (Faker\Generator $faker) {
 $factory->define(App\Book::class, function (Faker\Generator $faker) {
 
     return [
-        'title' => ucfirst($faker->unique()->title),
-        'subtitle' => ucfirst($faker->unique()->title),
-        'price' => $faker->randomFloat(),
+        'price' => $faker->randomFloat(2,0,null),
+        'title' => $faker->title,
+        'subtitle' => $faker->word,
     ];
 });

@@ -92,6 +92,13 @@
                         <p>Categoria</p>
                     </a>
                 </li>
+
+                <li class="@yield('active_book')">
+                    <a href="/books">
+                        <i class="fa fa-cutlery"></i>
+                        <p>Livro</p>
+                    </a>
+                </li>
             </ul>
         </div>
     </div>
